@@ -1,0 +1,89 @@
+[root@localhost ~]# ls
+anaconda-ks.cfg  initial-setup-ks.cfg  original-ks.cfg  wp.sql
+[root@localhost ~]# cd home/var/www/html
+-bash: cd: home/var/www/html: No such file or directory
+[root@localhost ~]# cd /
+[root@localhost /]# ls
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+[root@localhost /]# cd var/www/html
+[root@localhost html]# ls
+index.php        wp-blog-header.php    wp-includes        wp-signup.php
+license.txt      wp-comments-post.php  wp-links-opml.php  wp-trackback.php
+readme.html      wp-config.php         wp-load.php        xmlrpc.php
+test.php         wp-config-sample.php  wp-login.php
+wp-activate.php  wp-content            wp-mail.php
+wp-admin         wp-cron.php           wp-settings.php
+[root@localhost html]# vi wp-config
+[root@localhost html]# vi wp-co
+wp-comments-post.php  wp-config-sample.php  
+wp-config.php         wp-content/           
+[root@localhost html]# vi wp-co
+wp-comments-post.php  wp-config-sample.php  
+wp-config.php         wp-content/           
+[root@localhost html]# vi wp-config.php
+[root@localhost html]# chown -R apache:apache /var/www/html
+[root@localhost html]# chown -v /var/www/html
+chown: missing operand after e/var/www/htmlf
+Try 'chown --help' for more information.
+[root@localhost html]# chown -c
+chown: missing operand
+Try 'chown --help' for more information.
+[root@localhost html]# chown -c /html
+chown: missing operand after e/htmlf
+Try 'chown --help' for more information.
+[root@localhost html]# ls -l
+total 200
+-rw-r--r--.  1 apache apache   418 Sep 24  2013 index.php
+-rw-r--r--.  1 apache apache 19935 Jan  2 10:51 license.txt
+-rw-r--r--.  1 apache apache 10323 Mar  6 12:14 readme.html
+-rw-r--r--.  1 apache apache    24 Apr 13 23:20 test.php
+-rw-r--r--.  1 apache apache  5447 Sep 27  2016 wp-activate.php
+drwxr-xr-x.  9 apache apache  4096 Mar  6 12:14 wp-admin
+-rw-r--r--.  1 apache apache   364 Dec 19  2015 wp-blog-header.php
+-rw-r--r--.  1 apache apache  1627 Aug 29  2016 wp-comments-post.php
+-rw-rw-rw-.  1 apache apache  4145 Apr 28 01:38 wp-config.php
+-rw-r--r--.  1 apache apache  3886 Mar  6 12:14 wp-config-sample.php
+drwxr-xr-x.  5 apache apache    69 Mar  6 12:14 wp-content
+-rw-r--r--.  1 apache apache  3286 May 24  2015 wp-cron.php
+drwxr-xr-x. 18 apache apache  8192 Mar  6 12:14 wp-includes
+-rw-r--r--.  1 apache apache  2422 Nov 20 18:46 wp-links-opml.php
+-rw-r--r--.  1 apache apache  3301 Oct 24  2016 wp-load.php
+-rw-r--r--.  1 apache apache 33939 Nov 20 18:46 wp-login.php
+-rw-r--r--.  1 apache apache  8048 Jan 10 21:15 wp-mail.php
+-rw-r--r--.  1 apache apache 16250 Nov 28 21:39 wp-settings.php
+-rw-r--r--.  1 apache apache 29896 Oct 18  2016 wp-signup.php
+-rw-r--r--.  1 apache apache  4513 Oct 14  2016 wp-trackback.php
+-rw-r--r--.  1 apache apache  3065 Aug 31  2016 xmlrpc.php
+[root@localhost html]# cd ../
+[root@localhost www]# ls -l
+total 4
+drwxr-xr-x. 2 root   root      6 Apr 12 14:04 cgi-bin
+drwxr-xr-x. 5 apache apache 4096 Apr 28 01:38 html
+[root@localhost www]# cd ../
+[root@localhost var]# ls -l
+total 12
+drwxr-xr-x.  2 root root   19 Apr 14 04:18 account
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 adm
+drwxr-xr-x. 15 root root  190 Apr 13 20:24 cache
+drwxr-xr-x.  2 root root    6 Nov  7 02:44 crash
+drwxr-xr-x.  3 root root   34 Apr 14 04:18 db
+drwxr-xr-x.  3 root root   18 Apr 14 04:18 empty
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 games
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 gopher
+drwxr-xr-x.  3 root root   18 Apr 14 04:10 kerberos
+drwxr-xr-x. 57 root root 4096 Apr 28 01:24 lib
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 local
+lrwxrwxrwx.  1 root root   11 Apr 14 04:08 lock -> ../run/lock
+drwxr-xr-x. 22 root root 4096 Apr 28 01:25 log
+lrwxrwxrwx.  1 root root   10 Apr 14 04:08 mail -> spool/mail
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 nis
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 opt
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 preserve
+lrwxrwxrwx.  1 root root    6 Apr 14 04:08 run -> ../run
+drwxr-xr-x. 12 root root  140 Apr 14 04:18 spool
+drwxr-xr-x.  4 root root   28 Apr 14 04:13 target
+drwxrwxrwt.  9 root root 4096 Apr 28 01:28 tmp
+drwxr-xr-x.  4 root root   33 Apr 13 20:24 www
+drwxr-xr-x.  2 root root    6 Nov  5 08:38 yp
+[root@localhost var]# 
